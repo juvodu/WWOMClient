@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.springframework.web.client.RestTemplate;
 
 import com.juvodu.forecast.exception.WWOMClientException;
@@ -23,7 +22,7 @@ import com.juvodu.forecast.model.Forecast;
  */
 public class WWOMClient {
 
-	private static final Logger log = LoggerFactory.getLogger(WWOMClient.class);
+	private static final Logger log = Logger.getLogger(WWOMClient.class);
 	private static final String BASE_URI = "https://api.worldweatheronline.com/premium/v1/marine.ashx";
 	private static final String PARAM_KEY = "?key=";
 	private static final String PARAM_LOCATION = "&q=";
@@ -42,7 +41,7 @@ public class WWOMClient {
 	/**
 	 * Gets the forecast.
 	 * 
-	 * @see https://developer.worldweatheronline.com/premium-api-explorer.aspx
+	 *  https://developer.worldweatheronline.com/premium-api-explorer.aspx
 	 *      for API Documentation
 	 *
 	 * @param location
