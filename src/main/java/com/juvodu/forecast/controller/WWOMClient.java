@@ -102,7 +102,7 @@ public class WWOMClient {
 	 */
 	public Forecast getForecast(String location) throws WWOMClientException {
 
-		return getForecast(location, false, 6, false, null);
+		return getForecast(location, false, 3, true, null);
 	}
 
 	private boolean validateTimePeriod(int tp) {
