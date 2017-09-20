@@ -9,10 +9,10 @@ import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.web.client.RestTemplate;
 
 import com.juvodu.forecast.exception.WWOMClientException;
 import com.juvodu.forecast.model.Forecast;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * A simple WWOM Java Rest Client for retrieving Forcasts from World Weather

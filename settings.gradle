@@ -16,4 +16,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'Forcecast_Client'
+rootProject.name = 'WWOMClient'

@@ -1,21 +1,4 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE")
-    }
-}
-
 apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-
-jar {
-    baseName = 'WWOMClient'
-    version =  '0.1.0'
-}
 
 repositories {
     mavenCentral()
@@ -24,13 +7,22 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+jar {
+    baseName = 'WWOMClient'
+    version =  '0.1.0'
+}
+
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter")
-    compile("org.springframework:spring-web")
-    compile("com.fasterxml.jackson.core:jackson-databind")
-	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
-    
-    testCompile("junit:junit")
+
+    compile (
+            'org.springframework:spring-web:4.3.8.RELEASE',
+            'com.amazonaws:aws-lambda-java-log4j:1.0.0',
+            'com.fasterxml.jackson.core:jackson-core:2.8.5',
+            'com.fasterxml.jackson.core:jackson-databind:2.8.5',
+            'org.apache.commons:commons-lang3:3.6'
+    )
+
+    testCompile("junit:junit:4.12")
 }
 
 task wrapper(type: Wrapper) {

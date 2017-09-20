@@ -19,6 +19,11 @@ import com.juvodu.forecast.model.Tide;
 import com.juvodu.forecast.model.TideDatum;
 import com.juvodu.forecast.model.Weather;
 
+/**
+ * TestSuite for WWOMClient
+ *
+ * @author Juvodu
+ */
 public class WWOMClientTest {
 
 	private WWOMClient client;
